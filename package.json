@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@crypto-hex-decoder/utxo": "^2.0.0",
+    "raw-transaction-decoder": "^1.0.6",
+    "transaction-hex-decoder": "^1.0.2",
+    "tx-decoder": "^0.2.1"
+  }
+}

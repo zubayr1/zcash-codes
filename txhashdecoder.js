@@ -1,0 +1,13 @@
+const txHexDecoder = require("transaction-hex-decoder");
+ 
+// Transaction https://etherscan.io/tx/0x09b092b86ffc8f425b405d3ac0ef1ec51269fa024e64b4b5778961a4d588c982 -> Tool/utilities to check rawTx
+const ethEncodedRawTx = "0xf86e82cd70850bdfd63e00827918943c601b93eaad76d2f66f71a0b8c22dbbf2e71db688287bb23d4c9350008025a09f3842a8fd9d6228d4ee226524e249c81eba22c53a87855f2244b2064c8036d6a073c767ae047bce30dee587e5233649acbae36b10d97b39d11fb9b2ccabf9b925";
+const ethDecodedRawTx = txHexDecoder.decodeEthRawTx(ethEncodedRawTx);
+console.log("Decoded Transaction : "+JSON.stringify(ethDecodedRawTx));
+
+
+
+ 
+const btcEncodedRawTx = "01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000";
+const btcDecodedRawTx = txHexDecoder.decodeBtcRawTx(btcEncodedRawTx);
+console.log("Decoded transaction : "+JSON.stringify(btcDecodedRawTx));
